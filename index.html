@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>diabetes precidtion</title>
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Predictive analysis</h2>
+            <h3>how many times Pregnancies?</h3><input id="first" name="Pregnancies" type="number ">
+            <h3>What is your Glucose Level</h3><br><input id="second" name="Glucose" required="required">
+            <h3>what is your bp level?</h3><input id="third" name="BloodPressure" required="required">
+            <h3>what is your skin thickness ?</h3><br><input id="fourth" name="SkinThickness" required="required">
+            <h3>Insulin?</h3><br><input name="Insulin" id="Insulin" required="required">
+            <h3>what is your bmi?</h3><br><input name="BMI" id="BMI" required="required">
+            <h3>DiabetesPedigreeFunction</h3><br><input name="DiabetesPedigreeFunction" id="DiabetesPedigreeFunction" required="required">
+            <h3>what is your age</h3><input name="Age" id="Age" required="required">
+            <br><br><button id="sub" type="submit ">Check do you have diabetes or not</button><br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}</h3>
+    </div>
+        </body>
+
+</html>
